@@ -32,15 +32,18 @@ class _HomeState extends State<Home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const BannerWidget(),
+            BannerWidget(
+              bannerManga: getBannerData(),
+            ),
             Carousel(
-                carouselTitle: 'Jump back in',
+              carouselTitle: 'Jump back in',
               cards: getTrendingManga(),
             ),
             Carousel(
               carouselTitle: 'Trending',
               cards: getTrendingManga(),
             ),
+            const SizedBox(height: 60)
           ],
         ),
       ),
